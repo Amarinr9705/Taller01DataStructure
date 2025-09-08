@@ -183,11 +183,9 @@ public class Time
             newHour += newMinute / 60;
             newMinute = newMinute % 60;
         }
-        bool otherDay = false;
         if (newHour > 23)
         {
             newHour = newHour % 24;
-            otherDay = true;
         }
         return new Time(newHour, newMinute, newSecond, newMillisecond);
     }
