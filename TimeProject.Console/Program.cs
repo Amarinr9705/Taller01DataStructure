@@ -5,7 +5,7 @@ try
     var t2 = new Time(14);
     var t3 = new Time(9, 34);
     var t4 = new Time(19, 45, 56);
-    var t5 = new Time(24, 3, 45, 678);
+    var t5 = new Time(23, 3, 45, 678);
 
     var times = new List<Time> { t1, t2, t3, t4, t5 };
 
