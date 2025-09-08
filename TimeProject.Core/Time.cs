@@ -189,9 +189,9 @@ public class Time
         }
         return new Time(newHour, newMinute, newSecond, newMillisecond);
     }
-    public bool IsOtherDay(Time other)
+    public bool IsOtherDay(Time input)
     {
-        int totalHours = this._hour + other._hour;
+        int totalHours = this._hour + input._hour;
         return totalHours >= 24;
     }
 
