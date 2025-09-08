@@ -112,15 +112,15 @@ public class Time
         return $"{displayHour:00}:{_minute:00}:{_second:00}.{_millisecond:000} {period}";
     }
 
-    public int ToMilliseconds()
+    public double ToMilliseconds()
     {
         return _millisecond + (_second * 1000) + (_minute * 60000) + (_hour * 3600000);
     }
-    public int ToMinutes()
+    public double ToMinutes()
     {
         return (_hour * 60) + _minute + (_second / 60) + (_millisecond / 60000);
     }
-    public int ToSeconds()
+    public double ToSeconds()
     {
         return (_hour * 3600) + (_minute * 60) + _second + (_millisecond / 1000);
     }
@@ -191,8 +191,8 @@ public class Time
     }
     public bool IsOtherDay(Time input)
     {
-        int totalMs = this.ToMilliseconds() + input.ToMilliseconds();
-        return totalMs >= 24 * 3600 * 1000;
+        int totalHours = this._hour + input._hour;
+        return totalHours >= 24;
     }
 
 
